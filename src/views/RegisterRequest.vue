@@ -41,7 +41,7 @@
 
   <div v-if="step == 3">
     <form>
-      <p>Enter the phone number of the landlord for approval of Aadhaar Updation consent</p>
+      <p>Enter the phone number of the landlord/neighbour for approval of Aadhaar Updation consent</p>
       <div class="row">
         <div class="input-field ph-num-field">
           <input type="number" maxlength="8" v-model="landlord_mobile_number" />
