@@ -236,12 +236,12 @@ export default {
       this.landlord_name = response["payload"]["landlord_name"];
       this.landlord_contact_no = response["payload"]["landlord_mobile_no"];
       this.landlord_address = response["payload"]["landlord_address"];
-      this.landlord_previous_address = this.landlord_address;
+      this.landlord_previous_address = Object.assign({}, response["payload"]["landlord_address"]);
       this.step = 2;
       console.log(response);
     },
     reset_address(){
-      this.landlord_address = this.landlord_previous_address;
+      this.landlord_address = Object.assign({}, this.landlord_previous_address);
     },
     async check_address(){
       let payload = {
